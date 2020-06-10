@@ -4,21 +4,21 @@ pipeline{
       stage("Build"){
            steps{ 
             echo "running......"
-            bat "mvn clean package"
+            sh "mvn clean package"
             }
       }
       
       stage("Test"){
            steps{ 
             echo "running......"
-            bat "mvn test"
+            sh "mvn test"
             }
       }
      
          stage("Compile"){
            steps{ 
             echo "Compile......"
-            bat "mvn compile"
+            sh "mvn compile"
             }
       }
       stage("Deploy"){
